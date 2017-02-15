@@ -1,13 +1,17 @@
 {
-  "name": "@cwharris/webpack-typescript-bootstrap",
+  "name": "@cwharris/webpack-typescript-boilerplate",
   "version": "0.0.0-development",
+  "license": "ISC",
+  "author": {
+    "name": "Christopher Harris",
+    "url": "http://cwharris.com"
+  },
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.config.dev.ts",
     "build:dev": "webpack --config webpack.config.dev.ts",
-    "build:prod": "webpack --config webpack.config.production.ts"
+    "build:prod": "webpack --config webpack.config.production.ts",
+    "postinstall": "npm install ./app"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@types/html-webpack-plugin": "^2.11.2",
     "@types/webpack": "^2.2.5",
