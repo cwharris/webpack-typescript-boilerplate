@@ -5,7 +5,6 @@ import baseConfig from "./webpack.config.base";
 const port = process.env.POST || 8080;
 
 export default merge(baseConfig, {
-    entry: "./app/index.ts",
     plugins: [
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify("development")

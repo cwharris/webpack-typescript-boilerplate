@@ -1,10 +1,11 @@
 {
-  "name": "@cwharris/webpack-typescript-bootstrap",
+  "name": "@cwharris/webpack-typescript-boilerplate",
   "version": "0.0.0-development",
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.config.dev.ts",
     "build:dev": "webpack --config webpack.config.dev.ts",
-    "build:prod": "webpack --config webpack.config.production.ts"
+    "build:prod": "webpack --config webpack.config.production.ts",
+    "postinstall": "npm install ./app"
   },
   "author": "",
   "license": "ISC",

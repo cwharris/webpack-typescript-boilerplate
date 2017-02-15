@@ -21,6 +21,7 @@ const config: webpack.Configuration = {
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
     },
+    entry: "./app/index.tsx",
     output: {
         path: path.resolve(__dirname, "app-dist"),
         filename: "index.js"
