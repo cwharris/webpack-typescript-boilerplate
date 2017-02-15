@@ -8,9 +8,9 @@ export default merge(baseConfig, {
     entry: "./app/index.ts",
     plugins: [
         new webpack.DefinePlugin({
-            "process.env.NODE_ENV": JSON.stringify("development")
+            "process.env.NODE_ENV": JSON.stringify("production")
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.optimize.OccurrenceOrderPlugin(true),
+        new webpack.optimize.UglifyJsPlugin()
     ]
 });

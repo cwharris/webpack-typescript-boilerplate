@@ -1,4 +1,6 @@
+import * as path from "path";
 import * as webpack from "webpack";
+import * as HtmlWebpackPlugin from "html-webpack-plugin";
 
 const config: webpack.Configuration = {
     devtool: "inline-source-map",
@@ -18,7 +20,14 @@ const config: webpack.Configuration = {
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
-    }
+    },
+    output: {
+        path: path.resolve(__dirname, "app-dist"),
+        filename: "index.js"
+    },
+    plugins: [
+        new HtmlWebpackPlugin()
+    ]
 };
 
 export default config;
