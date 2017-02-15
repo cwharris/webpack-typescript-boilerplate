@@ -1,0 +1,19 @@
+{
+  "name": "@cwharris/ui-arranger",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.config.dev.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/webpack": "^2.2.5",
+    "@types/webpack-merge": "^0.0.4",
+    "webpack": "^2.2.1",
+    "webpack-merge": "^2.6.1",
+    "webpack-dev-server": "^2.3.0",
+    "ts-loader": "^2.0.0",
+    "json-loader": "^0.5.4",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.1.6"
+  }
+}
