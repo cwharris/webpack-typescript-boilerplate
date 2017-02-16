@@ -1,12 +1,9 @@
-// Place your settings in this file to overwrite default and user settings.
 {
     "files.exclude": {
         "**/.git": true,
         "**/.DS_Store": true,
-        "**/.vscode": true,
         "**/node_modules": true,
-        "**/app-dist": true,
-        "**/bin": true,
-        "**/obj": true
+        "bin": true,
+        "obj": true
     }
 }

@@ -6,11 +6,10 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.1\\webpack-typescript-boilerplate.dll",
+            "program": "${workspaceRoot}/bin/Debug/netcoreapp1.0/webpack-typescript-boilerplate.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
-            "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
                 "enabled": true,
                 "args": "${auto-detect-url}",
@@ -31,12 +30,6 @@
             "sourceFileMap": {
                 "/Views": "${workspaceRoot}/Views"
             }
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach",
-            "processId": "${command.pickProcess}"
         }
     ]
 }

@@ -1,7 +1,11 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "noImplicitAny": true
-    }
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
