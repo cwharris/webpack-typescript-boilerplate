@@ -1,7 +1,7 @@
 import * as url from "url";
 import * as webpack from "webpack";
 import * as merge from "webpack-merge";
-import { RestartElectronPlugin } from "./webpack/RestartElectronPlugin";
+import { RestartElectronPlugin } from "./RestartElectronPlugin";
 
 import { config as baseConfig } from "./webpack.config.main.base";
 

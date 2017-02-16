@@ -2,8 +2,6 @@ import * as path from "path";
 import * as url from "url";
 import * as electron from "electron";
 
-const port = process.env.PORT || 8080;
-
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -16,18 +14,6 @@ let mainWindow: Electron.BrowserWindow;
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600});
-
-  // process.env.NODE_ENV == "production"
-  //   ? {
-  //     pathname: path.join(process.cwd(), "app-dist/index.html"),
-  //     protocol: "file:",
-  //     slashes: true
-  //   }
-  //   : {
-  //     pathname: `localhost:${port}/index.html`,
-  //     protocol: "http:",
-  //     slashes: true
-  //   };
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format(process.env.APP_URL));

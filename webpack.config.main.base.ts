@@ -9,8 +9,4 @@ export const config = merge(baseConfig, {
     entry: {
         main: "./app/main.ts"
     },
-    output: {
-        path: path.resolve(__dirname, "app-dist"),
-        filename: "[name].js"
-    },
 });

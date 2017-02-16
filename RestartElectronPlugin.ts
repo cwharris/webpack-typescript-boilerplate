@@ -9,7 +9,7 @@ export class RestartElectronPlugin {
     private _filename: string;
     private _child: child_process.ChildProcess = null;
 
-    constructor (filename: string) {
+    constructor (filename: string, kill: boolean = true) {
         this._filename = filename;
     }
 
@@ -24,6 +24,15 @@ export class RestartElectronPlugin {
                 electron as any,
                 [this._filename],
                 { "stdio": "inherit" });
+
+            this._child.on("exit", () => {
+                process.exit();
+            });
+
+            this._child.on("SIGINT", (error: any) => {
+                console.log(error);
+                process.exit();
+            });
 
             next();
         });

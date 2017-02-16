@@ -8,9 +8,9 @@
   },
   "scripts": {
     "postinstall": "npm install ./app",
-    "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
+    "dev": "concurrently --kill-others \"npm run dev:renderer\" \"npm run dev:main\"",
     "dev:main": "webpack --watch --config webpack.config.main.dev.ts",
-    "dev:renderer": "webpack-dev-server --inline --hot --config webpack.config.renderer.dev.ts",
+    "dev:renderer": "webpack-dev-server --inline --config webpack.config.renderer.dev.ts",
     "build": "npm run build:prod:main && npm run build:prod:renderer",
     "build:main": "webpack --config webpack.config.main.prod.ts",
     "build:renderer": "webpack --config webpack.config.renderer.prod.ts"

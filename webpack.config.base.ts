@@ -20,5 +20,9 @@ export const config: webpack.Configuration = {
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
-    }
+    },
+    output: {
+        path: path.resolve(__dirname, "app-dist"),
+        filename: "[name].js"
+    },
 };

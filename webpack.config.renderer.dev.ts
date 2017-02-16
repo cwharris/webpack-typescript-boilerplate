@@ -8,10 +8,7 @@ export const port = process.env.PORT || 8080;
 export default merge(baseConfig, {
     devtool: "inline-source-map",
     devServer: {
-        hot: true,
         port: port
-    },
-    entry: {
     },
     plugins:[
         new webpack.DefinePlugin({
