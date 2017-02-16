@@ -2,5 +2,8 @@
     "name": "@cwharris/webpack-typescript-boilerplate-app",
     "version": "0.0.0-development",
     "dependencies": {
+        "@types/electron": "^1.4.32",
+        "@types/es6-shim": "^0.31.32",
+        "es6-shim": "^0.35.3"
     }
 }
