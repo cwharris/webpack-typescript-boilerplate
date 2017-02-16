@@ -12,6 +12,10 @@ const appUrl: url.Url = {
 };
 
 export default merge(baseConfig, {
+    output: {
+        path: path.join(__dirname, "app-dist"),
+        filename: "main.js"
+    },
     plugins:[
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify("production")

@@ -7,20 +7,20 @@
     "url": "http://cwharris.com"
   },
   "scripts": {
-    "dev:c": "npm run build:dev:main && concurrently \"webpack-dev-server --inline --hot --config webpack.config.renderer.dev.ts\" \"electron ./app-dist/main.js\"",
-    "dev-other": "webpack-dev-server --open --config webpack.config.renderer.dev.ts",
-    "build:dev": "npm run build:dev:main && npm run build:dev:renderer",
-    "build:dev:main": "webpack --config webpack.config.main.dev.ts",
-    "build:dev:renderer": "webpack --config webpack.config.renderer.dev.ts",
-    "build:prod": "npm run build:prod:main && npm run build:prod:renderer",
-    "build:prod:main": "webpack --config webpack.config.main.prod.ts",
-    "build:prod:renderer": "webpack --config webpack.config.renderer.prod.ts",
-    "postinstall": "npm install ./app"
+    "postinstall": "npm install ./app",
+    "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
+    "dev:main": "webpack --watch --config webpack.config.main.dev.ts",
+    "dev:renderer": "webpack-dev-server --inline --hot --config webpack.config.renderer.dev.ts",
+    "build": "npm run build:prod:main && npm run build:prod:renderer",
+    "build:main": "webpack --config webpack.config.main.prod.ts",
+    "build:renderer": "webpack --config webpack.config.renderer.prod.ts"
   },
   "dependencies": {
+    "@types/electron": "^1.4.32",
     "@types/html-webpack-plugin": "^2.11.2",
     "@types/webpack": "^2.2.5",
     "@types/webpack-merge": "^0.0.4",
+    "electron": "^1.4.15",
     "concurrently": "^3.3.0",
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",

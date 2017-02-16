@@ -6,9 +6,11 @@ import { config as baseConfig } from "./webpack.config.base";
 
 export const config = merge(baseConfig, {
     target: "electron-main",
-    entry: "./app/main.ts",
+    entry: {
+        main: "./app/main.ts"
+    },
     output: {
-        path: path.join(__dirname, "app-dist"),
-        filename: "main.js"
-    }
+        path: path.resolve(__dirname, "app-dist"),
+        filename: "[name].js"
+    },
 });

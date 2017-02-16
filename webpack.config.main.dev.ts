@@ -1,6 +1,7 @@
 import * as url from "url";
 import * as webpack from "webpack";
 import * as merge from "webpack-merge";
+import { RestartElectronPlugin } from "./webpack/RestartElectronPlugin";
 
 import { config as baseConfig } from "./webpack.config.main.base";
 
@@ -19,6 +20,7 @@ export default merge(baseConfig, {
         }),
         new webpack.DefinePlugin({
             "process.env.APP_URL": JSON.stringify(appUrl)
-        })
+        }),
+        new RestartElectronPlugin("./app-dist/main.js")
     ]
 });

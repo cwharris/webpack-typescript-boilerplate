@@ -12,7 +12,7 @@ export const config = merge(baseConfig, {
     },
     output: {
         path: path.resolve(__dirname, "app-dist"),
-        filename: "renderer.js"
+        filename: "[name].js"
     },
     plugins: [
         new HtmlWebpackPlugin()
