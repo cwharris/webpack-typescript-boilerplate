@@ -12,11 +12,12 @@ const appUrl: url.Url = {
 };
 
 export default merge(baseConfig, {
+    devtool: "cheap-module-eval-source-map",
     output: {
         path: path.join(__dirname, "app-dist"),
         filename: "main.js"
     },
-    plugins:[
+    plugins: [
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify("production")
         }),

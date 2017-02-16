@@ -6,11 +6,11 @@ import { config as baseConfig } from "./webpack.config.renderer.base";
 export const port = process.env.PORT || 8080;
 
 export default merge(baseConfig, {
-    devtool: "inline-source-map",
+    devtool: "cheap-module-source-map",
     devServer: {
         port: port
     },
-    plugins:[
+    plugins: [
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify("development")
         }),
